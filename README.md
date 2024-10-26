@@ -44,9 +44,9 @@ Here are some example equations and instructions on how to use the application t
 ### Linear Equation Example (Gauss Elimination)
 Given a system:
 
-3x + 4y + 2z = 1 
-2x + y + 3z = 2 \
-x + 5y + 2z = 3 \
+3x + 4y + 2z = 1 <br>
+2x + y + 3z = 2 <br>
+x + 5y + 2z = 3 <br>
 
 To solve, input the coefficients and constants into the system when prompted, and the application will output solutions using your selected method.
 
