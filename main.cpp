@@ -6,6 +6,12 @@
 #include "NewtonRaphsonMethod.h"
 #include "RungeKutta.h"
 #include "InverseMatrix.h"
+#include "GaussEliminatioin.h"
+#include "Jacobi_Iterative.h"
+#include "LU_factorization.h"
+#include "Jordan_Elimination.h"
+#include "Gauss_Siedel.h"
+
 
 using namespace std;
 
