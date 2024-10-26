@@ -67,6 +67,8 @@ For an ODE \( y' = x + y \) with \( y(0) = 1 \):
 To compile and run the application from the command line using `g++`:
 ```bash
 g++ main.cpp Jacobi.cpp GaussSeidel.cpp GaussElimination.cpp GaussJordan.cpp LU_factorization.cpp NewtonRaphson.cpp Bisection.cpp FalsePosition.cpp Secant.cpp RungeKutta.cpp MatrixInversion.cpp -o numerical_methods_solver
+```
+```bash
 ./numerical_methods_solver
 ```
 
