@@ -66,10 +66,10 @@ For an ODE \( y' = x + y \) with \( y(0) = 1 \):
 ### Using `g++` Command
 To compile and run the application from the command line using `g++`:
 ```bash
-g++ main.cpp Jacobi.cpp GaussSeidel.cpp GaussElimination.cpp GaussJordan.cpp LU_factorization.cpp NewtonRaphson.cpp Bisection.cpp FalsePosition.cpp Secant.cpp RungeKutta.cpp MatrixInversion.cpp -o numerical_methods_solver
+g++ main.cpp BiSectionMethod.cpp FalsePositionMethod.cpp Gauss_Siedel.cpp GaussEliminatioin.cpp InverseMatrix.cpp Jacobi_Iterative.cpp Jordan_Elimination.cpp LU_factorization.cpp NewtonRaphsonMethod.cpp RungeKutta.cpp SecantMethod.cpp -o numerical
 ```
 ```bash
-./numerical_methods_solver
+./numerical
 ```
 
 ### Using Code::Blocks
