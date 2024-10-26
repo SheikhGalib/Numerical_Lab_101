@@ -1,32 +1,32 @@
 #include "FalsePositionMethod.h"
+using namespace std;
 
 double FalsePositionMethod::evaluateEquation(double x) {
-    // Evaluates the equation ax^2 + bx + c
+    // equation type ax^2 + bx + c
     return coefA * x * x + coefB * x + coefC;
 }
 
 void FalsePositionMethod::falsePositionMethod() {
-    // Get user input for coefficients
-    std::cout << "Enter the coefficients for the quadratic equation (ax^2 + bx + c = 0):\n";
-    std::cout << "a: "; std::cin >> coefA;
-    std::cout << "b: "; std::cin >> coefB;
-    std::cout << "c: "; std::cin >> coefC;
 
-    // Get user input for interval, tolerance, and maximum iterations
-    std::cout << "Enter interval [a, b] for the root search:\n";
-    std::cout << "a: "; std::cin >> a;
-    std::cout << "b: "; std::cin >> b;
+     cout << "Enter the coefficients for the quadratic equation (ax^2 + bx + c = 0):\n";
+     cout << "a: ";  cin >> coefA;
+     cout << "b: ";  cin >> coefB;
+     cout << "c: ";  cin >> coefC;
 
-    std::cout << "Enter tolerance: "; std::cin >> tolerance;
-    std::cout << "Enter maximum iterations: "; std::cin >> maxIterations;
 
-    // Validate initial interval for the function
+     cout << "Enter interval [a, b] for the root search:\n";
+     cout << "a: ";  cin >> a;
+     cout << "b: ";  cin >> b;
+
+     cout << "Enter tolerance: ";  cin >> tolerance;
+     cout << "Enter maximum iterations: ";  cin >> maxIterations;
+
+    // initial interval function
     if (evaluateEquation(a) * evaluateEquation(b) >= 0) {
-        std::cout << "Invalid interval: The function must have different signs at a and b.\n";
+         cout << "Invalid interval: The function must have different signs at a and b.\n";
         return;
     }
 
-    // Start finding the root
     findRoot();
 }
 
@@ -35,12 +35,12 @@ void FalsePositionMethod::findRoot() {
     int iteration = 0;
 
     while (iteration < maxIterations) {
-        // Calculate point c using the False Position formula
+        // False Position formula
         c = b - (evaluateEquation(b) * (b - a)) / (evaluateEquation(b) - evaluateEquation(a));
 
-        // Check for convergence or exact root
-        if (std::abs(evaluateEquation(c)) <= tolerance) {
-            std::cout << "Root found at: " << c << " after " << iteration + 1 << " iterations.\n";
+        // convergence or exact root
+        if ( abs(evaluateEquation(c)) <= tolerance) {
+             cout << "Root found at: " << c << " after " << iteration + 1 << " iterations.\n";
             return;
         }
 
@@ -53,6 +53,6 @@ void FalsePositionMethod::findRoot() {
         iteration++;
     }
 
-    std::cout << "Root approximation after max iterations: " << c << "\n";
+     cout << "Root approximation after max iterations: " << c << "\n";
 }
 

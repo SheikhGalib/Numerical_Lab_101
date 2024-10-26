@@ -5,6 +5,7 @@
 #include "SecantMethod.h"
 #include "NewtonRaphsonMethod.h"
 #include "RungeKutta.h"
+#include "InverseMatrix.h"
 
 using namespace std;
 
@@ -25,7 +26,7 @@ jump1:
 
     if (choice == 1)
     {
-    jump2:
+jump2:
         cout << "Choose a method: "<<endl;
         cout << "1. Jacobi iterative method \t 2. Gauss-Seidel iterative method \t 3. Gauss elimination"<<endl;
         cout << "4. Gauss-Jordan elimination \t 5. LU factorization"<<endl;
@@ -64,7 +65,8 @@ jump1:
             // LU-factorization lu-facto;
             // lu-facto.lu_factorization();
         }
-        else{
+        else
+        {
             cout << "Choose between 1, 2, 3, 4, 5 options only.";
             cout << "Do you want to continue? (y/n) : ";
             cin >> jump;
@@ -74,7 +76,7 @@ jump1:
     }
     else if (choice == 2)
     {
-    jump3:
+jump3:
         cout << "Choose a method: "<<endl;
         cout << "1. Bi-section method \t 2. False position method"<<endl;
         cout << "3. Secant method \t 4. Newton-Raphson method"<<endl;
@@ -106,7 +108,8 @@ jump1:
             NewtonRaphsonMethod newtonRaphson;
             newtonRaphson.newtonRaphsonMethod();
         }
-        else{
+        else
+        {
             cout << "Choose between 1, 2, 3, 4 options only.";
             cout << "Do you want to continue? (y/n) : ";
             cin >> jump;
@@ -116,7 +119,7 @@ jump1:
     }
     else if (choice == 3)
     {
-    jump4:
+jump4:
         cout << "Choose a method: "<<endl;
         cout << "1. Runge-Kutta method"<<endl;
         int choice3;
@@ -130,7 +133,8 @@ jump1:
             rk.getInput();
             rk.displayResult();
         }
-        else{
+        else
+        {
             cout << "Choose Option 1 only.";
             cout << "Do you want to continue? (y/n) : ";
             cin >> jump;
@@ -141,19 +145,30 @@ jump1:
     }
     else if (choice == 4)
     {
-    jump5:
+jump5:
         cout << "\t Matrix Inversion\n";
 
         // Calling Matrix inversion Class
-        // Matrix-Inversion matinverse;
-        // matinverse.matrix-inversion();
+
+        int n;
+        cout << "Enter matrix size (n x n): ";
+        cin >> n;
+
+        InverseMatrix inversematrix(n, n);
+        inversematrix.input();
+
+        cout << "\nOriginal Matrix:" << endl;
+        inversematrix.display();
+
+        inversematrix.calculateInverse();
 
         cout << "Do you want to continue? (y/n) : ";
         cin >> jump;
         if ( jump == 'y' || jump == 'Y')
             goto jump5;
     }
-    else{
+    else
+    {
         cout << "Choose between 1, 2, 3, 4 options only.";
         cout << "Do you want to continue? (y/n) : ";
         cin >> jump;
