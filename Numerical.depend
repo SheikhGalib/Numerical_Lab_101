@@ -1,0 +1,54 @@
+# depslib dependency file v1.0
+1729941095 source:c:\users\user\documents\numerical_project\numerical_lab_101\bisectionmethod.cpp
+	"BiSectionMethod.h"
+
+1729941095 c:\users\user\documents\numerical_project\numerical_lab_101\bisectionmethod.h
+	<iostream>
+	<cmath>
+
+1729941095 source:c:\users\user\documents\numerical_project\numerical_lab_101\falsepositionmethod.cpp
+	"FalsePositionMethod.h"
+
+1729941095 c:\users\user\documents\numerical_project\numerical_lab_101\falsepositionmethod.h
+	<iostream>
+	<cmath>
+
+1729941095 source:c:\users\user\documents\numerical_project\numerical_lab_101\newtonraphsonmethod.cpp
+	"NewtonRaphsonMethod.h"
+
+1729941095 c:\users\user\documents\numerical_project\numerical_lab_101\newtonraphsonmethod.h
+	<iostream>
+	<cmath>
+
+1729941432 source:c:\users\user\documents\numerical_project\numerical_lab_101\rungekutta.cpp
+	<iostream>
+	<cmath>
+	"RungeKutta.h"
+
+1729941400 c:\users\user\documents\numerical_project\numerical_lab_101\rungekutta.h
+
+1729941095 source:c:\users\user\documents\numerical_project\numerical_lab_101\secantmethod.cpp
+	"SecantMethod.h"
+
+1729941095 c:\users\user\documents\numerical_project\numerical_lab_101\secantmethod.h
+	<iostream>
+	<cmath>
+
+1729948776 source:c:\users\user\documents\numerical_project\numerical_lab_101\inversematrix.cpp
+	"InverseMatrix.h"
+	<iostream>
+	<iomanip>
+	<cmath>
+
+1729948761 c:\users\user\documents\numerical_project\numerical_lab_101\inversematrix.h
+	<vector>
+
+1729948091 source:c:\users\user\documents\numerical_project\numerical_lab_101\main.cpp
+	<bits/stdc++.h>
+	"BiSectionMethod.h"
+	"FalsePositionMethod.h"
+	"SecantMethod.h"
+	"NewtonRaphsonMethod.h"
+	"RungeKutta.h"
+	"InverseMatrix.h"
+
