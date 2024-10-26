@@ -45,8 +45,8 @@ Here are some example equations and instructions on how to use the application t
 Given a system:
 
 3x + 4y + 2z = 1 
-2x + y + 3z = 2
-x + 5y + 2z = 3
+2x + y + 3z = 2 \
+x + 5y + 2z = 3 \
 
 To solve, input the coefficients and constants into the system when prompted, and the application will output solutions using your selected method.
 
