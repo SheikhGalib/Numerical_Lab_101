@@ -43,3 +43,35 @@ Here are some example equations and instructions on how to use the application t
 
 ### Linear Equation Example (Gauss Elimination)
 Given a system:
+
+3x + 4y + 2z = 1 
+2x + y + 3z = 2
+x + 5y + 2z = 3
+
+To solve, input the coefficients and constants into the system when prompted, and the application will output solutions using your selected method.
+
+### Non-linear Equation Example (Newton-Raphson)
+Solve \( f(x) = 3x^2 + 2x - 5 \) using Newton-Raphson.
+1. Input the coefficients as `a=3`, `b=2`, `c=-5`.
+2. Set an initial guess, tolerance, and maximum iterations when prompted.
+3. The application outputs the approximate root of \( f(x) = 0 \).
+
+### Differential Equation Example (Runge-Kutta)
+For an ODE \( y' = x + y \) with \( y(0) = 1 \):
+1. Input initial values for `x0`, `y0`, the desired `x` at which to find `y`, and a step size `h`.
+2. The application will output the value of \( y \) at the specified `x`.
+
+## Compilation and Usage
+
+### Using `g++` Command
+To compile and run the application from the command line using `g++`:
+```bash
+g++ main.cpp Jacobi.cpp GaussSeidel.cpp GaussElimination.cpp GaussJordan.cpp LU_factorization.cpp NewtonRaphson.cpp Bisection.cpp FalsePosition.cpp Secant.cpp RungeKutta.cpp MatrixInversion.cpp -o numerical_methods_solver
+./numerical_methods_solver
+```
+
+### Using Code::Blocks
+1. Open `Code::Blocks`.
+2. Import the project file via git, set up the `main.cpp` as the entry point, and build the project.
+
+
