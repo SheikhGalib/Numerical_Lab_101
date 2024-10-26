@@ -43,33 +43,65 @@ jump2:
 
         if (choice1 == 1)
         {
-            // calling class
-            // Jacobi-iterative jacobi
-            // jacobi.jacobi_iterative();
+            Jacobi_Iterative_Equation j;
+            j.Jacobi_Iterative_Solve();
         }
         else if (choice1 == 2)
         {
-            // Calling Class
-            // Gauss-Seidel-iterative gs-iter;
-            // gs-iter.gauss_seidel_iterative();
+            Gauss_Siedel_Equation g;
+            g.Gauss_Siedel_Solve();
         }
         else if (choice1 == 3)
         {
-            // Calling Class
-            // Gauss-elimination g-eli;
-            // g-eli.gauss_elimination();
+            Gauss_Elimination_Equation g;
+            g.Gauss_Elimination_Solve();
         }
         else if (choice1 == 4)
         {
-            // Calling class
-            // Gauss-Jordan-elimination gj-eli;
-            // gj-eli.gauss_jordan_elimination();
+            JordanEquation j;
+            j.Jordan_Elimination();
         }
         else if (choice1 == 5)
         {
-            // Calling Class
-            // LU-factorization lu-facto;
-            // lu-facto.lu_factorization();
+            int n;
+
+            std::cout << "Enter the size of the matrix (n x n): " << std::endl;
+            std::cin >> n;
+
+            std::vector<std::vector<double>> A(n, std::vector<double>(n));
+            std::vector<double> b(n);
+
+            std::cout << "Enter the elements of the matrix A (row-wise):" << std::endl;
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    std::cout << "Enter element A" << i << j << " :" << std::endl;
+                    std::cin >> A[i][j];
+                }
+            }
+
+            std::cout << "Enter the elements of the vector b:" << std::endl;
+            for (int i = 0; i < n; i++)
+            {
+                std::cin >> b[i];
+            }
+
+            LUDecomposition lu(A);
+            lu.decompose();
+
+            lu.printL();
+            lu.printU();
+
+            std::vector<double> x = lu.solve(b);
+            std::cout << "Solution vector x:" << std::endl;
+            for (double val : x)
+            {
+                std::cout << val << " ";
+            }
+            std::cout << std::endl;
+
+            return 0;
         }
         else
         {

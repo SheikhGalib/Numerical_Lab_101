@@ -124,10 +124,10 @@
 1729948783 d:\files\academic\2-2\numericals\numerical_lab_101\jordan_elimination.h
 	<iostream>
 
-1729951021 source:d:\files\academic\2-2\numericals\numerical_lab_101\lu_factorization.cpp
+1729952967 source:d:\files\academic\2-2\numericals\numerical_lab_101\lu_factorization.cpp
 	"LU_factorization.h"
 
-1729951021 d:\files\academic\2-2\numericals\numerical_lab_101\lu_factorization.h
+1729952967 d:\files\academic\2-2\numericals\numerical_lab_101\lu_factorization.h
 	<vector>
 	<iostream>
 

@@ -1,17 +1,26 @@
 #ifndef LU_FACTORIZATION_H
 #define LU_FACTORIZATION_H
 
+
 #include <vector>
 #include <iostream>
 
-void LU_Decomposition(const std::vector<std::vector<double>>& A,
-                      std::vector<std::vector<double>>& L,
-                      std::vector<std::vector<double>>& U);
+class LUDecomposition {
+public:
+    LUDecomposition(const std::vector<std::vector<double>>& matrix);
 
-std::vector<double> Forward_Substitution(const std::vector<std::vector<double>>& L,
-                                         const std::vector<double>& b);
+    void decompose();
+    std::vector<double> solve(const std::vector<double>& b);
+    void printL() const;
+    void printU() const;
 
-std::vector<double> Backward_Substitution(const std::vector<std::vector<double>>& U,
-                                           const std::vector<double>& y);
+private:
+    std::vector<std::vector<double>> A;
+    std::vector<std::vector<double>> L;
+    std::vector<std::vector<double>> U;
+
+    std::vector<double> forwardSubstitution(const std::vector<double>& b) const;
+    std::vector<double> backwardSubstitution(const std::vector<double>& y) const;
+};
 
 #endif
