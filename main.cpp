@@ -4,6 +4,7 @@
 #include "FalsePositionMethod.h"
 #include "SecantMethod.h"
 #include "NewtonRaphsonMethod.h"
+#include "RungeKutta.h"
 
 using namespace std;
 
@@ -125,8 +126,9 @@ jump1:
         if (choice3 == 1)
         {
             // Calling class
-            // Runge-Kutta-method rkutta;
-            // rkutta.runge_kutta_method();
+            RungeKutta rk;
+            rk.getInput();
+            rk.displayResult();
         }
         else{
             cout << "Choose Option 1 only.";
