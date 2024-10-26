@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="./" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="./" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -36,6 +38,8 @@
 		<Unit filename="BiSectionMethod.h" />
 		<Unit filename="FalsePositionMethod.cpp" />
 		<Unit filename="FalsePositionMethod.h" />
+		<Unit filename="InverseMatrix.cpp" />
+		<Unit filename="InverseMatrix.h" />
 		<Unit filename="NewtonRaphsonMethod.cpp" />
 		<Unit filename="NewtonRaphsonMethod.h" />
 		<Unit filename="RungeKutta.cpp" />
