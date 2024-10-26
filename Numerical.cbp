@@ -32,6 +32,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="BiSectionMethod.cpp" />
+		<Unit filename="BiSectionMethod.h" />
+		<Unit filename="FalsePositionMethod.cpp" />
+		<Unit filename="FalsePositionMethod.h" />
+		<Unit filename="NewtonRaphsonMethod.cpp" />
+		<Unit filename="NewtonRaphsonMethod.h" />
+		<Unit filename="RungeKutta.cpp" />
+		<Unit filename="RungeKutta.h" />
+		<Unit filename="SecantMethod.cpp" />
+		<Unit filename="SecantMethod.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
